@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level Up Campus — Central Coast's First Complete Athlete Development Hub | San Luis Obispo</title>
+<meta name="description" content="Level Up Athletic Development — the Central Coast's first complete athlete and family development hub. Nike Partner. San Luis Obispo, CA. Cornerstone founding spots available now.">
+<meta name="keywords" content="Central Coast athletic training, San Luis Obispo youth sports, Nike Partner gym SLO, female athlete development California, family sports facility, flag football Central Coast, athlete branding program">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #080a0e;
+    --navy: #070c1a;
+    --gold: #f5b800;
+    --gold-dim: #c99300;
+    --white: #f7f4ef;
+    --white-soft: rgba(247,244,239,0.72);
+    --white-muted: rgba(247,244,239,0.45);
+    --white-faint: rgba(247,244,239,0.12);
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw;
+    height: 68px;
+    background: rgba(7,12,26,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid rgba(245,184,0,0.18);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--white); }
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--white-soft); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold); color: var(--black);
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 10px 22px; border: none; cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  }
+  .nav-cta:hover { background: #ffc929; transform: translateY(-1px); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+    padding: 120px 5vw 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      linear-gradient(120deg, rgba(7,12,26,0.97) 0%, rgba(7,12,26,0.75) 55%, rgba(7,12,26,0.4) 100%),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(245,184,0,0.025) 40px,
+        rgba(245,184,0,0.025) 41px
+      );
+  }
+  .hero-grid-lines {
+    position: absolute; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(to right, rgba(245,184,0,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(245,184,0,0.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .hero-accent {
+    position: absolute; right: -120px; top: 50%; transform: translateY(-50%);
+    width: 700px; height: 700px; z-index: 0;
+    border: 1.5px solid rgba(245,184,0,0.08);
+    border-radius: 50%;
+  }
+  .hero-accent::before {
+    content: ''; position: absolute; inset: 60px;
+    border: 1.5px solid rgba(245,184,0,0.06);
+    border-radius: 50%;
+  }
+  .hero-accent::after {
+    content: ''; position: absolute; inset: 120px;
+    border: 1.5px solid rgba(245,184,0,0.04);
+    border-radius: 50%;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 760px; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--font-display); font-size: 0.75rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 2rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 32px; height: 1.5px; background: var(--gold);
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(4.5rem, 10vw, 9rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: var(--white);
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    margin-top: 2rem;
+    font-size: 1.15rem;
+    color: var(--white-soft);
+    max-width: 520px;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  .hero-sub strong { color: var(--white); font-weight: 500; }
+  .hero-ctas {
+    margin-top: 2.5rem;
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--black);
+    font-family: var(--font-display); font-weight: 800;
+    font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 16px 40px; border: none; cursor: pointer;
+    text-decoration: none; display: inline-block;
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: #ffc929; transform: translateY(-2px); }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 15px 36px;
+    border: 1.5px solid rgba(247,244,239,0.35);
+    cursor: pointer; text-decoration: none; display: inline-block;
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+    transition: border-color 0.2s, color 0.2s, transform 0.15s;
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .hero-stat-bar {
+    position: absolute; bottom: 48px; left: 5vw; right: 5vw; z-index: 1;
+    display: flex; gap: 3rem;
+  }
+  .hero-stat {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .hero-stat-num {
+    font-family: var(--font-display);
+    font-weight: 800; font-size: 2.2rem;
+    color: var(--gold); line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--white-muted);
+  }
+
+  /* ─── TRUST BAR ─── */
+  .trust-bar {
+    background: var(--gold);
+    padding: 18px 5vw;
+    display: flex; align-items: center; justify-content: center;
+    gap: clamp(1.5rem, 4vw, 4rem); flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 700; font-size: 0.8rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--black);
+  }
+  .trust-item svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .trust-sep { width: 4px; height: 4px; background: rgba(0,0,0,0.25); border-radius: 50%; }
+
+  /* ─── SECTION COMMONS ─── */
+  section { padding: 120px 5vw; }
+  .section-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 900; font-size: clamp(2.8rem, 6vw, 5rem);
+    text-transform: uppercase; line-height: 0.92;
+    color: var(--white);
+  }
+  .section-body {
+    color: var(--white-soft); font-weight: 300;
+    max-width: 580px; margin-top: 1.2rem;
+    font-size: 1.05rem;
+  }
+  .divider {
+    width: 48px; height: 3px; background: var(--gold); margin: 1.5rem 0;
+  }
+
+  /* ─── PILLARS ─── */
+  .pillars { background: var(--black); }
+  .pillars-header { max-width: 600px; margin-bottom: 5rem; }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5px;
+    background: rgba(245,184,0,0.1);
+  }
+  .pillar-card {
+    background: var(--black);
+    padding: 3rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+  .pillar-card::before {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: var(--gold);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  }
+  .pillar-card:hover { background: #0a0f1f; }
+  .pillar-card:hover::before { transform: scaleX(1); }
+  .pillar-num {
+    font-family: var(--font-display);
+    font-weight: 900; font-size: 5rem;
+    color: rgba(245,184,0,0.1);
+    position: absolute; top: 1rem; right: 1.5rem;
+    line-height: 1; pointer-events: none;
+    transition: color 0.3s;
+  }
+  .pillar-card:hover .pillar-num { color: rgba(245,184,0,0.18); }
+  .pillar-icon {
+    width: 52px; height: 52px;
+    border: 1.5px solid rgba(245,184,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--gold);
+    font-size: 1.5rem;
+  }
+  .pillar-name {
+    font-family: var(--font-display);
+    font-weight: 800; font-size: 1.5rem;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+  .pillar-desc {
+    font-size: 0.92rem; color: var(--white-soft);
+    font-weight: 300; line-height: 1.65;
+  }
+
+  /* ─── CORNERSTONE / PRICING ─── */
+  .cornerstone { background: var(--navy); position: relative; overflow: hidden; }
+  .cornerstone::before {
+    content: 'CORNERSTONE';
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    font-family: var(--font-display); font-weight: 900;
+    font-size: 22vw; text-transform: uppercase;
+    color: rgba(245,184,0,0.025);
+    white-space: nowrap; pointer-events: none;
+    letter-spacing: -0.02em;
+  }
+  .cornerstone-header {
+    display: flex; flex-wrap: wrap;
+    justify-content: space-between; align-items: flex-end;
+    gap: 2rem; margin-bottom: 4rem;
+    position: relative; z-index: 1;
+  }
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    position: relative; z-index: 1;
+  }
+  .tier-card {
+    background: rgba(255,255,255,0.03);
+    border: 1.5px solid rgba(247,244,239,0.1);
+    padding: 2.5rem 2rem;
+    position: relative;
+    display: flex; flex-direction: column;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .tier-card:hover {
+    border-color: rgba(245,184,0,0.5);
+    transform: translateY(-4px);
+  }
+  .tier-card.featured {
+    border-color: var(--gold);
+    background: rgba(245,184,0,0.05);
+  }
+  .scarcity-badge {
+    position: absolute; top: -1px; right: 1.5rem;
+    background: var(--gold); color: var(--black);
+    font-family: var(--font-display); font-weight: 800;
+    font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 5px 14px;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+    padding-bottom: 14px;
+  }
+  .tier-label {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.75rem;
+    font-family: var(--font-display); font-weight: 600;
+  }
+  .tier-name {
+    font-family: var(--font-display);
+    font-weight: 900; font-size: 1.9rem;
+    text-transform: uppercase; letter-spacing: 0.02em;
+    color: var(--white); line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .tier-ideal {
+    font-size: 0.82rem; color: var(--white-muted); font-weight: 300;
+    margin-bottom: 2rem; line-height: 1.5;
+  }
+  .tier-price-block {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(247,244,239,0.1);
+    border-bottom: 1px solid rgba(247,244,239,0.1);
+  }
+  .tier-price {
+    font-family: var(--font-display);
+    font-weight: 900; font-size: 3.2rem;
+    color: var(--white); line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .tier-price sup { font-size: 1.4rem; vertical-align: top; margin-top: 0.4rem; display: inline-block; }
+  .tier-access {
+    margin-top: 0.5rem;
+    font-size: 0.85rem; color: var(--white-soft);
+  }
+  .tier-bonus {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(245,184,0,0.12);
+    border: 1px solid rgba(245,184,0,0.3);
+    color: var(--gold);
+    font-size: 0.78rem; font-weight: 500;
+    padding: 5px 12px; margin-top: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+  .tier-cta {
+    margin-top: auto; padding-top: 2rem;
+  }
+  .btn-tier {
+    width: 100%;
+    background: transparent; color: var(--gold);
+    font-family: var(--font-display); font-weight: 800;
+    font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 14px 20px;
+    border: 1.5px solid var(--gold);
+    cursor: pointer; text-decoration: none; display: block; text-align: center;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+  }
+  .btn-tier:hover { background: var(--gold); color: var(--black); transform: translateY(-1px); }
+  .tier-card.featured .btn-tier {
+    background: var(--gold); color: var(--black);
+  }
+  .tier-card.featured .btn-tier:hover { background: #ffc929; }
+
+  /* ─── COMMUNITY ─── */
+  .community { background: var(--black); }
+  .community-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 4rem;
+  }
+  .track-label {
+    font-family: var(--font-display);
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+  }
+  .track-title {
+    font-family: var(--font-display);
+    font-weight: 900; font-size: 2rem; text-transform: uppercase;
+    color: var(--white); margin-bottom: 2rem;
+  }
+  .partnership-tiers { display: flex; flex-direction: column; gap: 0; }
+  .p-tier {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 0;
+    border-bottom: 0.5px solid rgba(247,244,239,0.1);
+  }
+  .p-tier:last-child { border-bottom: none; }
+  .p-tier-name {
+    font-family: var(--font-display);
+    font-weight: 700; font-size: 1.1rem; text-transform: uppercase;
+    color: var(--white);
+  }
+  .p-tier-amount {
+    font-family: var(--font-display);
+    font-weight: 900; font-size: 1.4rem;
+    color: var(--gold);
+  }
+  .legacy-visual {
+    background: rgba(245,184,0,0.04);
+    border: 1.5px solid rgba(245,184,0,0.2);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  .tiles-display {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px;
+  }
+  .tile {
+    aspect-ratio: 1;
+    background: rgba(245,184,0,0.15);
+    border: 0.5px solid rgba(245,184,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 0.5rem;
+    color: rgba(245,184,0,0.5); text-align: center;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    line-height: 1.3;
+  }
+  .tile.cornerstone-tile {
+    background: rgba(245,184,0,0.35);
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .tile-options { display: flex; flex-direction: column; gap: 1rem; }
+  .tile-option {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(247,244,239,0.1);
+    cursor: pointer; transition: border-color 0.2s;
+  }
+  .tile-option:hover { border-color: rgba(245,184,0,0.4); }
+  .tile-opt-name {
+    font-family: var(--font-display);
+    font-weight: 700; font-size: 1rem; text-transform: uppercase;
+    color: var(--white);
+  }
+  .tile-opt-price { font-family: var(--font-display); font-weight: 900; color: var(--gold); font-size: 1.2rem; }
+  .tile-opt-desc { font-size: 0.78rem; color: var(--white-muted); margin-top: 2px; }
+
+  /* ─── BECOMING HER ─── */
+  .becoming-her {
+    background: var(--navy);
+    position: relative; overflow: hidden;
+  }
+  .bh-inner {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 6rem; align-items: center;
+  }
+  .bh-text {}
+  .bh-text .section-title em { color: var(--gold); font-style: italic; }
+  .bh-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px; background: rgba(245,184,0,0.1);
+    margin-top: 3rem;
+  }
+  .bh-stat {
+    background: var(--navy);
+    padding: 2rem 1.5rem;
+  }
+  .bh-stat-num {
+    font-family: var(--font-display);
+    font-weight: 900; font-size: 2.5rem;
+    color: var(--gold); line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .bh-stat-label {
+    font-size: 0.8rem; color: var(--white-soft);
+    font-weight: 300; line-height: 1.4;
+  }
+  .bh-visual {
+    position: relative;
+  }
+  .bh-card {
+    background: rgba(245,184,0,0.05);
+    border: 1.5px solid rgba(245,184,0,0.25);
+    padding: 3rem 2.5rem;
+    position: relative;
+  }
+  .bh-card::before {
+    content: '"';
+    position: absolute; top: 1rem; left: 2rem;
+    font-family: var(--font-display);
+    font-size: 8rem; font-weight: 900;
+    color: rgba(245,184,0,0.1); line-height: 1;
+    pointer-events: none;
+  }
+  .bh-manifesto {
+    font-family: var(--font-display);
+    font-weight: 700; font-size: 1.65rem;
+    color: var(--white); line-height: 1.2;
+    text-transform: uppercase;
+    position: relative; z-index: 1;
+  }
+  .bh-manifesto em { color: var(--gold); font-style: italic; }
+  .bh-sub-text {
+    margin-top: 1.5rem;
+    font-size: 0.92rem; color: var(--white-soft);
+    font-weight: 300; line-height: 1.7;
+  }
+  .bh-price-highlight {
+    margin-top: 2rem;
+    display: flex; align-items: baseline; gap: 12px;
+  }
+  .bh-price {
+    font-family: var(--font-display); font-weight: 900;
+    font-size: 3rem; color: var(--gold);
+  }
+  .bh-price-label { font-size: 0.85rem; color: var(--white-soft); }
+  .bh-bullets {
+    list-style: none; margin-top: 1.5rem;
+    display: flex; flex-direction: column; gap: 0.6rem;
+  }
+  .bh-bullets li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 0.9rem; color: var(--white-soft);
+  }
+  .bh-bullets li::before {
+    content: '→'; color: var(--gold);
+    flex-shrink: 0; font-weight: 700; margin-top: 1px;
+  }
+
+  /* ─── CLOSING CTA ─── */
+  .closing-cta {
+    background: var(--black);
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .closing-cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 100%, rgba(245,184,0,0.08) 0%, transparent 70%);
+  }
+  .closing-cta-inner { position: relative; z-index: 1; }
+  .closing-cta .section-title { font-size: clamp(3rem, 7vw, 6.5rem); }
+  .closing-sub {
+    max-width: 560px; margin: 1.5rem auto 0;
+    color: var(--white-soft); font-weight: 300;
+    font-size: 1.05rem;
+  }
+  .closing-main-cta {
+    margin: 3rem 0;
+    display: flex; justify-content: center;
+  }
+  .contact-options {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px; background: rgba(245,184,0,0.12);
+    max-width: 800px; margin: 0 auto;
+  }
+  .contact-card {
+    background: var(--black);
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .contact-card:hover { background: #0a0f1f; }
+  .contact-icon {
+    width: 48px; height: 48px;
+    border: 1.5px solid rgba(245,184,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem;
+    color: var(--gold);
+  }
+  .contact-label {
+    font-family: var(--font-display);
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--white-muted); margin-bottom: 0.4rem;
+  }
+  .contact-value {
+    font-family: var(--font-display);
+    font-weight: 700; font-size: 1rem;
+    color: var(--white); text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy);
+    border-top: 0.5px solid rgba(245,184,0,0.15);
+    padding: 3rem 5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    font-weight: 800; font-size: 1.4rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--gold);
+  }
+  .footer-logo span { color: var(--white-soft); }
+  .footer-meta {
+    font-size: 0.78rem; color: var(--white-muted);
+    letter-spacing: 0.08em;
+  }
+  .footer-tagline {
+    font-family: var(--font-display);
+    font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--white-muted);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow { animation: fadeUp 0.6s 0.1s both; }
+  .hero-title { animation: fadeUp 0.8s 0.25s both; }
+  .hero-sub { animation: fadeUp 0.7s 0.4s both; }
+  .hero-ctas { animation: fadeUp 0.7s 0.55s both; }
+  .hero-stat-bar { animation: fadeUp 0.7s 0.7s both; }
+
+  /* ─── SCROLL FADE ─── */
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-stat-bar { gap: 1.5rem; position: static; margin-top: 3rem; }
+    .community-grid { grid-template-columns: 1fr; }
+    .bh-inner { grid-template-columns: 1fr; }
+    .contact-options { grid-template-columns: 1fr; }
+    .hero-title { font-size: clamp(3.5rem, 16vw, 6rem); }
+    section { padding: 80px 5vw; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Level Up <span>Athletic</span></a>
+  <ul class="nav-links">
+    <li><a href="#campus">The Campus</a></li>
+    <li><a href="#cornerstone">Cornerstone</a></li>
+    <li><a href="#becoming-her">Becoming Her</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#cornerstone" class="nav-cta">Secure My Spot</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Nike Partner · San Luis Obispo, CA · Est. 2025</div>
+    <h1 class="hero-title">One Roof.<br><em>One Community.</em><br>One Movement.</h1>
+    <p class="hero-sub">The Central Coast's <strong>first complete athlete and family development hub</strong> is here — and founding spots are running out.</p>
+    <div class="hero-ctas">
+      <a href="#cornerstone" class="btn-primary">Secure My Spot</a>
+      <a href="#campus" class="btn-secondary">Explore the Campus</a>
+    </div>
+  </div>
+  <div class="hero-stat-bar">
+    <div class="hero-stat">
+      <span class="hero-stat-num">6</span>
+      <span class="hero-stat-label">Pillars Under One Roof</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">#1</span>
+      <span class="hero-stat-label">Central Coast Hub</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">Nike</span>
+      <span class="hero-stat-label">Official Partner</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+    Official Nike Partner
+  </div>
+  <div class="trust-sep"></div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+    Serving the Central Coast Since 2025
+  </div>
+  <div class="trust-sep"></div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+    Female Athlete Development Program
+  </div>
+  <div class="trust-sep"></div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Community-First Programming
+  </div>
+</div>
+
+<!-- CAMPUS PILLARS -->
+<section class="pillars" id="campus">
+  <div class="pillars-header">
+    <p class="section-eyebrow">What Lives Under One Roof</p>
+    <h2 class="section-title">Six Pillars.<br>One Campus.</h2>
+    <div class="divider"></div>
+    <p class="section-body">Everything an athlete and family needs — training, competition, leadership, media, and community — all converging in San Luis Obispo.</p>
+  </div>
+  <div class="pillars-grid">
+    <div class="pillar-card reveal">
+      <span class="pillar-num">01</span>
+      <div class="pillar-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M9 9h6v6H9z"/><path d="M3 12h6M15 12h6M12 3v6M12 15v6"/></svg>
+      </div>
+      <h3 class="pillar-name">RISE Field House</h3>
+      <p class="pillar-desc">Official home of RISE Flag Football — competitive play with real stakes in a dedicated, professional-grade facility.</p>
+    </div>
+    <div class="pillar-card reveal reveal-delay-1">
+      <span class="pillar-num">02</span>
+      <div class="pillar-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 008 0"/><path d="M12 8v4"/></svg>
+      </div>
+      <h3 class="pillar-name">Level Up Court</h3>
+      <p class="pillar-desc">Basketball, volleyball, and community events unite under one roof — the heartbeat of team sport on the Central Coast.</p>
+    </div>
+    <div class="pillar-card reveal reveal-delay-2">
+      <span class="pillar-num">03</span>
+      <div class="pillar-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <h3 class="pillar-name">Performance Lab</h3>
+      <p class="pillar-desc">Precision speed, strength, and individual athlete development — where top-end Central Coast athletic training happens.</p>
+    </div>
+    <div class="pillar-card reveal">
+      <span class="pillar-num">04</span>
+      <div class="pillar-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 8v8M8 12h8"/></svg>
+      </div>
+      <h3 class="pillar-name">Campus Center</h3>
+      <p class="pillar-desc">Leadership workshops and mentorship that build athletes prepared for life — not just the game.</p>
+    </div>
+    <div class="pillar-card reveal reveal-delay-1">
+      <span class="pillar-num">05</span>
+      <div class="pillar-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="15" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <h3 class="pillar-name">Media Studio</h3>
+      <p class="pillar-desc">Athlete branding, storytelling, and recruiting content production — because your story is part of your performance.</p>
+    </div>
+    <div class="pillar-card reveal reveal-delay-2">
+      <span class="pillar-num">06</span>
+      <div class="pillar-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <h3 class="pillar-name">Legacy Walk</h3>
+      <p class="pillar-desc">The physical foundation honoring those who built this movement — permanent recognition for those who showed up first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CORNERSTONE PROGRAM -->
+<section class="cornerstone" id="cornerstone">
+  <div class="cornerstone-header">
+    <div>
+      <p class="section-eyebrow">Founding Membership</p>
+      <h2 class="section-title">Become a<br>Cornerstone.</h2>
+      <div class="divider"></div>
+    </div>
+    <p class="section-body" style="margin-top:0; max-width:400px; font-size: 0.95rem;">This isn't a price list. It's an invitation to be part of something the Central Coast has never seen. Founding spots are strictly limited. Once they're gone, this moment is gone.</p>
+  </div>
+
+  <div class="tier-grid">
+    <!-- Individual -->
+    <div class="tier-card reveal">
+      <div class="scarcity-badge">Limited Spots</div>
+      <p class="tier-label">Individual Athlete</p>
+      <h3 class="tier-name">Solo<br>Athlete</h3>
+      <p class="tier-ideal">For dedicated athletes who want elite development and individual focus at the Central Coast's top training campus.</p>
+      <div class="tier-price-block">
+        <div class="tier-price"><sup>$</sup>2,599</div>
+        <p class="tier-access">60 Weeks Access</p>
+        <div class="tier-bonus">+ 8 Bonus Weeks Included</div>
+      </div>
+      <div class="tier-cta">
+        <a href="mailto:Katrina@levelup-athletes.com?subject=Cornerstone Individual Athlete" class="btn-tier">Become a Cornerstone</a>
+      </div>
+    </div>
+
+    <!-- Family -->
+    <div class="tier-card featured reveal reveal-delay-1">
+      <div class="scarcity-badge">Limited Spots</div>
+      <p class="tier-label">Most Popular</p>
+      <h3 class="tier-name">Family<br>All-In</h3>
+      <p class="tier-ideal">For families who want everything under one roof — sport, development, community, and identity.</p>
+      <div class="tier-price-block">
+        <div class="tier-price"><sup>$</sup>3,900</div>
+        <p class="tier-access">60 Weeks Access</p>
+        <div class="tier-bonus">+ 8 Bonus Weeks Included</div>
+      </div>
+      <div class="tier-cta">
+        <a href="mailto:Katrina@levelup-athletes.com?subject=Cornerstone Family Enrollment" class="btn-tier">Become a Cornerstone</a>
+      </div>
+    </div>
+
+    <!-- Becoming Her -->
+    <div class="tier-card reveal reveal-delay-2">
+      <div class="scarcity-badge">Limited Spots</div>
+      <p class="tier-label">Becoming Her</p>
+      <h3 class="tier-name">Women's<br>Program</h3>
+      <p class="tier-ideal">For female athletes seeking a dedicated program — built for them, led by them, not an afterthought.</p>
+      <div class="tier-price-block">
+        <div class="tier-price"><sup>$</sup>1,199</div>
+        <p class="tier-access">14 Months Access</p>
+        <div class="tier-bonus">+ 2 Bonus Months Included</div>
+      </div>
+      <div class="tier-cta">
+        <a href="mailto:Katrina@levelup-athletes.com?subject=Becoming Her Program Enrollment" class="btn-tier">Become a Cornerstone</a>
+      </div>
+    </div>
+
+    <!-- Team Partner -->
+    <div class="tier-card reveal reveal-delay-3">
+      <div class="scarcity-badge">Limited Spots</div>
+      <p class="tier-label">Team Partner</p>
+      <h3 class="tier-name">Cornerstone<br>Team</h3>
+      <p class="tier-ideal">For local teams, clubs, and organizations ready to train, compete, and grow as a unit.</p>
+      <div class="tier-price-block">
+        <div class="tier-price"><sup>$</sup>4,680</div>
+        <p class="tier-access">14 Months Access</p>
+        <div class="tier-bonus">+ 2 Bonus Months Included</div>
+      </div>
+      <div class="tier-cta">
+        <a href="mailto:Katrina@levelup-athletes.com?subject=Cornerstone Team Partner Inquiry" class="btn-tier">Become a Cornerstone</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY PARTNERSHIP -->
+<section class="community">
+  <div>
+    <p class="section-eyebrow">Community Partnership</p>
+    <h2 class="section-title reveal">Build Something<br>That Lasts.</h2>
+    <div class="divider"></div>
+    <p class="section-body reveal">Your name. Your legacy. Permanently woven into the foundation of the Central Coast's most important new athletic institution.</p>
+  </div>
+  <div class="community-grid">
+    <div class="reveal">
+      <p class="track-label">Track 1 — Naming &amp; Partnership</p>
+      <h3 class="track-title">Become a Movement<br>Partner</h3>
+      <div class="partnership-tiers">
+        <div class="p-tier">
+          <div>
+            <div class="p-tier-name">Community Builder</div>
+            <div style="font-size:0.8rem; color: var(--white-muted); margin-top:3px;">Entry-level naming recognition</div>
+          </div>
+          <div class="p-tier-amount">$2,500</div>
+        </div>
+        <div class="p-tier">
+          <div>
+            <div class="p-tier-name">Campus Champion</div>
+            <div style="font-size:0.8rem; color: var(--white-muted); margin-top:3px;">Pillar naming recognition</div>
+          </div>
+          <div class="p-tier-amount">$5,000</div>
+        </div>
+        <div class="p-tier">
+          <div>
+            <div class="p-tier-name">Level Up Partner</div>
+            <div style="font-size:0.8rem; color: var(--white-muted); margin-top:3px;">Space &amp; program naming rights</div>
+          </div>
+          <div class="p-tier-amount">$10,000</div>
+        </div>
+        <div class="p-tier">
+          <div>
+            <div class="p-tier-name">Movement Leader</div>
+            <div style="font-size:0.8rem; color: var(--white-muted); margin-top:3px;">Premier naming partnership</div>
+          </div>
+          <div class="p-tier-amount">$25,000+</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <p class="track-label">Track 2 — Legacy Walk Tiles</p>
+      <h3 class="track-title">Claim Your Tile.<br>Earn Your Place.</h3>
+      <div class="legacy-visual">
+        <div class="tiles-display">
+          <div class="tile">Your<br>Name</div>
+          <div class="tile">Athlete<br>Tile</div>
+          <div class="tile cornerstone-tile">Corner-<br>stone</div>
+          <div class="tile">Level<br>Up</div>
+          <div class="tile">Your<br>Name</div>
+          <div class="tile">2025</div>
+          <div class="tile cornerstone-tile">Legacy<br>Walk</div>
+          <div class="tile">Athlete<br>Tile</div>
+          <div class="tile">SLO</div>
+          <div class="tile">Your<br>Name</div>
+          <div class="tile cornerstone-tile">Founding<br>Member</div>
+          <div class="tile">2025</div>
+        </div>
+      </div>
+      <div class="tile-options">
+        <div class="tile-option">
+          <div>
+            <div class="tile-opt-name">Athlete Tile</div>
+            <div class="tile-opt-desc">Your name engraved on the Legacy Walk</div>
+          </div>
+          <div class="tile-opt-price">$250</div>
+        </div>
+        <div class="tile-option">
+          <div>
+            <div class="tile-opt-name">Cornerstone Tile</div>
+            <div class="tile-opt-desc">Premium engraving — permanent recognition</div>
+          </div>
+          <div class="tile-opt-price">$2,500</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BECOMING HER -->
+<section class="becoming-her" id="becoming-her">
+  <div class="bh-inner">
+    <div class="bh-text">
+      <p class="section-eyebrow">Becoming Her</p>
+      <h2 class="section-title reveal"><em>Designed</em><br>For Her.</h2>
+      <div class="divider"></div>
+      <p class="section-body reveal" style="max-width:100%">Female athlete development in California has an image problem: training spaces that treat women as an afterthought. Not here. The Becoming Her program is a pillar — built from the ground up for women's athletic development, leadership, and identity.</p>
+
+      <ul class="bh-bullets reveal">
+        <li>Training environment designed specifically for female athletes</li>
+        <li>Female athlete development programming — not modified men's content</li>
+        <li>Leadership and mentorship woven into every session</li>
+        <li>Community of women who compete, grow, and lead together</li>
+        <li>Athlete branding and recruiting support through the Media Studio</li>
+        <li>Central Coast female athlete development — finally, a real home</li>
+      </ul>
+
+      <div class="bh-price-highlight reveal">
+        <div class="bh-price">$1,199</div>
+        <div class="bh-price-label">14 Months Access<br>+ 2 Bonus Months</div>
+      </div>
+      <div style="margin-top: 1.5rem;">
+        <a href="mailto:Katrina@levelup-athletes.com?subject=Becoming Her Program" class="btn-primary">Join the Movement</a>
+      </div>
+    </div>
+    <div class="bh-visual reveal reveal-delay-2">
+      <div class="bh-card">
+        <p class="bh-manifesto">
+          "Not a side program.<br>Not a modified plan.<br><em>A space that was built<br>for you, full stop."</em>
+        </p>
+        <p class="bh-sub-text">The Becoming Her program gives female athletes on the Central Coast what they've never had before: a complete development environment where their game, their brand, and their leadership are treated as the priority — every single day.</p>
+      </div>
+      <div class="bh-stats">
+        <div class="bh-stat">
+          <div class="bh-stat-num">14</div>
+          <div class="bh-stat-label">Months of dedicated female athlete programming</div>
+        </div>
+        <div class="bh-stat">
+          <div class="bh-stat-num">6</div>
+          <div class="bh-stat-label">Pillars available — all of them, not just one</div>
+        </div>
+        <div class="bh-stat">
+          <div class="bh-stat-num">#1</div>
+          <div class="bh-stat-label">Dedicated women's program on the Central Coast</div>
+        </div>
+        <div class="bh-stat">
+          <div class="bh-stat-num">2025</div>
+          <div class="bh-stat-label">The founding class starts now</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="closing-cta" id="contact">
+  <div class="closing-cta-inner">
+    <p class="section-eyebrow" style="text-align:center">Founding Class Forming Now</p>
+    <h2 class="section-title reveal" style="text-align:center">The founding class<br>is forming now.</h2>
+    <p class="closing-sub reveal">Spots are strictly limited to ensure every founding member gets focused, high-quality attention. Once they're gone, this moment is gone.</p>
+    <div class="closing-main-cta reveal">
+      <a href="mailto:Katrina@levelup-athletes.com?subject=I Want to Join the Founding Class" class="btn-primary" style="font-size:1.1rem; padding: 18px 52px;">Join the Movement</a>
+    </div>
+
+    <div class="contact-options reveal">
+      <a href="mailto:Katrina@levelup-athletes.com" class="contact-card">
+        <div class="contact-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <p class="contact-label">Email</p>
+        <p class="contact-value">Katrina@levelup-athletes.com</p>
+      </a>
+      <a href="https://instagram.com/levelup_athletic_development" target="_blank" class="contact-card">
+        <div class="contact-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <p class="contact-label">Instagram</p>
+        <p class="contact-value">@levelup_athletic_development</p>
+      </a>
+      <a href="mailto:Katrina@levelup-athletes.com?subject=Cornerstone Enrollment" class="contact-card">
+        <div class="contact-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
+        <p class="contact-label">Enrollment Form</p>
+        <p class="contact-value">Secure Your Spot Now</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Level Up <span>Athletic Development</span></div>
+  <div class="footer-tagline">One Roof. One Community. One Movement.</div>
+  <div class="footer-meta">San Luis Obispo, CA · Nike Partner · © 2025 Level Up Athletic Development</div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
